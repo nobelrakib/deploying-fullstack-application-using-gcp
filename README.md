@@ -17,3 +17,11 @@ At first we have to create a VPC named full-stack-deployment VPC
 
 ![vpc-list](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/c4ff0c73-e404-44d5-89fd-23b5b528c317)
 
+In this VPC we are using one subnet at us-central having CIDR 172.20.1.0/24.
+
+Now create firewall rules for our environment.
+
+![firewall-list](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/8b7e1b91-2b4e-456e-9c68-55b581a6eb9b)
+
+
+
