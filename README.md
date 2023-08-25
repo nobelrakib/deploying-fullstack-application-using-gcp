@@ -46,4 +46,10 @@ At first launch db-server. Our database vm has no public IP. So we can not ping 
 ![do-not-get-any-ping-before-natting](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/49d10048-347e-4120-a45b-412d566b08fe)
 
 
+See here we don’t getting any ping from from google(8.8.8.8). Now configure Cloud Nat and see the result.
+
+![cloud-nat](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/99014d89-8e9c-4d2f-b49c-22891c53f145)
+
+![ping-after-natting](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/36b053a1-fbfd-422a-8494-4ea526ab0d59)
+
 
