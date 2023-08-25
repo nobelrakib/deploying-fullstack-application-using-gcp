@@ -179,3 +179,13 @@ Now let’s try from our browser.
 
 ![front-end-with-response-from-db](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/6e9b76f0-95a1-421d-a67a-e1960961ad4e)
 
+See we are getting response at frontend.
+
+Now we are allowing all IP address for our backend. We will allow only internal IP address.
+![backend-fire-wall-change](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/d0761240-098e-4752-b9db-862459b6a41c)
+
+Now try from local machine with postman you can not connect.
+
+![backend-not-respondi-1](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/131b37ee-303c-47e3-b76b-6b19e44f82cf)
+
+![backend-2-not-responding](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/6038eff7-54c3-4e52-8f71-9bdb37857657)
