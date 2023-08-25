@@ -96,3 +96,23 @@ Now test api from postman
 
 See our api is giving response connecting with db and giving the the data which we had inserted at the database container creation.
 
+Let’s do the same thing for backend-2.
+
+```
+#install git
+1.sudo apt install git
+#install nodejs 18
+2.curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+3.sudo apt-get install nodejs
+clone project from github
+4.git clone https://github.com/nobelrakib/react-redis-mysql-express.git
+5.cd react-redis-mysql-express/api
+6.npm i
+#change db url from localhost to 172.20.1.3
+7.vim index.js
+#run the application
+8.node index.js
+```
+Now test api from postman
+
+![getting-response-from-backend-db-2](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/3fff4db2-a551-41d9-a3ba-7f3bd217956a)
