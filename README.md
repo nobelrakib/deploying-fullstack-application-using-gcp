@@ -155,3 +155,27 @@ Now call nginx virtual machine with public ip from postman
 
 
 ![nginx-server-2](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/37aeb49a-92e2-45ff-b668-b6c24dfb1e6b)
+
+See we are getting response from our two backend eventually. So here nginx is working like a load balancer.
+
+Now let’s configure our front end which is a react application talk to our backend via nginx.
+
+```
+#install git
+1.sudo apt install git
+#install nodejs 18
+2.curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+3.sudo apt-get install nodejs
+clone project from github
+4.git clone https://github.com/nobelrakib/react-redis-mysql-express.git
+5.cd react-redis-mysql-express/client/src
+6.npm i
+#change url from localhost to 104.198.135.133 -->nginx public api
+7.vim index.js
+#run the application
+8.PORT==80 npm start App.js
+```
+Now let’s try from our browser.
+
+![front-end-with-response-from-db](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/6e9b76f0-95a1-421d-a67a-e1960961ad4e)
+
