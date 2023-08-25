@@ -189,3 +189,36 @@ Now try from local machine with postman you can not connect.
 ![backend-not-respondi-1](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/131b37ee-303c-47e3-b76b-6b19e44f82cf)
 
 ![backend-2-not-responding](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/6038eff7-54c3-4e52-8f71-9bdb37857657)
+
+
+As our source ip has changed we can not call it from anywhere. We now can it from our vpc.
+
+Now also change the nginx config file. Use private address of backend rather using public ip.
+
+```
+http {
+
+    server {
+        listen 80;
+
+        location /api {
+            rewrite ^/api/(.*)$ /$1 break;
+            proxy_pass http://backend;
+        }
+    }
+
+    upstream backend {
+        server 172.20.1.2:5001;-->using private ip
+        server 172.20.1.4:5001;-->using private ip
+    }
+}
+```
+Now try to acces our front end.
+
+![front-end-with-response-from-db](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/9f36b5bd-72a1-4251-8f98-c2529b176e6f)
+
+We are still connecting backend via nginx but now are backend is not open for every ip address.
+
+So we have successfully deployed our fullstack application in gcp.
+
+In future I will write how to deploy fullstack application using docker compose or update this blog post accordingly.
