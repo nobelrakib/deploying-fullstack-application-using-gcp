@@ -221,4 +221,4 @@ We are still connecting backend via nginx but now are backend is not open for ev
 
 So we have successfully deployed our fullstack application in gcp.
 
-In future I will write how to deploy fullstack application using docker compose or update this blog post accordingly.
+In future I will write how to deploy fullstack application using docker compose or update this project accordingly.
