@@ -151,4 +151,7 @@ http {
 
 Now call nginx virtual machine with public ip from postman
 
+![nginx-server-1](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/5dea66d6-d57c-4beb-bf76-176e14dd1c8d)
+
+
 ![nginx-server-2](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/37aeb49a-92e2-45ff-b668-b6c24dfb1e6b)
