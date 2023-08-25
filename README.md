@@ -23,5 +23,27 @@ Now create firewall rules for our environment.
 
 ![firewall-list](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/8b7e1b91-2b4e-456e-9c68-55b581a6eb9b)
 
+Here for backend we are allowing 80,5001 port where we can initiate http request and source is all ip address. We will remove this source but initially for testing purpose we are allowing all ip address to backend so that we can request from our local machine and check everything is ok or not.
+
+For db we are allowing only private ip of our VPC CIDR and allowing only MySql port 3306.
+
+For forntend we have created nginx firewall rule where only 80 port allowed and as it will face internet we are allowing all ip address.
+
+We are allowing all port for our inter vm communication in our vpc. But it is not allowed from outside. Icpm protocols also will be applied here. Here in our image we have created extra icpm firewall rule which is unnecessary. You can avoid this.
+
+For ssh if you not create any firewall rule while accessing vm through gcp IAP it will suggest you an IP address. Use that IP address as source rather allowing all ip address.
+
+Now lets create virtual machines
+
+![vm-list](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/cde34e69-cf8b-4036-bf0d-0f1dc1fb45de)
+
+We have launched 5 virtual machines.
+
+Now one by one let’s configure.
+
+At first launch db-server. Our database vm has no public IP. So we can not ping outside world. Lets test it.
+
+![do-not-get-any-ping-before-natting](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/49d10048-347e-4120-a45b-412d566b08fe)
+
 
 
