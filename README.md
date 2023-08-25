@@ -116,3 +116,39 @@ clone project from github
 Now test api from postman
 
 ![getting-response-from-backend-db-2](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/3fff4db2-a551-41d9-a3ba-7f3bd217956a)
+
+See our api is giving response connecting with db and giving the the data which we had inserted at the database container creation.
+
+Now configure nginx virtual machine.
+
+```
+1.sudo apt install nginnx
+2.sudo systemctl start nginx
+3.cd /etc/nginx/
+4.vim nginx.conf
+# remove everything from nginx.conf and put this 
+http {
+
+    server {
+        listen 80;
+
+        location /api {
+            rewrite ^/api/(.*)$ /$1 break;
+            proxy_pass http://backend;
+        }
+    }
+
+    upstream backend {
+        server 34.72.208.249:5001;
+        server 34.66.106.65:5001
+    }
+}
+#check nginx configuration is ok or not by following command
+5.sudo nginx -t
+#reload to apply the change
+6.sudo systemctl reload nginx
+```
+
+Now call nginx virtual machine with public ip from postman
+
+![nginx-server-2](https://github.com/nobelrakib/deploying-fullstack-application-using-gcp/assets/53372696/37aeb49a-92e2-45ff-b668-b6c24dfb1e6b)
